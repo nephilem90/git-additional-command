@@ -1,5 +1,6 @@
 #!/bin/bash
-chmod +x command/*
 for file in command/*; do
-    cp "$file" /usr/local/bin/"$(basename -- $file)"
+    base_name=$(basename -- $file)
+    cp "$file" "/usr/local/bin/$base_name"
+    chmod +x "/usr/local/bin/$base_name"
 done
