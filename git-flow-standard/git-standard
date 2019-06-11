@@ -1,14 +1,14 @@
 #!/bin/bash
 
 usage() {
-    echo "        feature: crea un branch feature"
-    echo "        hotfix: crea un branch di hotfix"
-    echo "        bugfix: crea un branch di bugfix"
-    echo "        release: crea un branch di release"
-    echo "        commit: committa tutte le modifiche"
-    echo "        finish: mergia ed elimina il branch"
-    echo "        published: pusha il branch in remoto"
-    echo "        delete: elimina branch corrente"
+    echo "        feature: create feature branch (start to develop)"
+    echo "        hotfix: create hotfix branch (start to master)"
+    echo "        bugfix: create bugfix branch (start to feature)"
+    echo "        release: create a release branch (start to develop)"
+    echo "        commit: commit all change with standard commit message"
+    echo "        finish: feature/bugfix merge to develop, hotfix merge to master and develop. delete local and remote current branch after merge"
+    echo "        publish: push current branch to remote (crete a remote branch if not exist)"
+    echo "        delete: delete a current branch with git flow"
     exit
 }
 if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]  || [[ -z "$1" ]]; then
