@@ -1,0 +1,6 @@
+#!/bin/bash
+branchName=$(git get-branch-name)
+if [[ "$branchName" != "master" ]]; then
+    git master
+    git branch -D "$branchName"
+fi
