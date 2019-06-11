@@ -4,9 +4,10 @@ install:
 	chmod +x install.sh
 	./depends-install.sh
 	./install.sh base-command
+	./install.sh git-flow-standard
 
 .PHONY: unistall
 unistall:
 	chmod +x unistall.sh
 	./unistall.sh base-command
-	./unistall.sh git-flow-depends
+	./unistall.sh git-flow-standard

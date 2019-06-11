@@ -36,19 +36,19 @@ done
 
 case "$1" in
     feature | bugfix)
-        gim-feature-and-bugfix "$1" "$consoleTaskId"
+        git-standard-feature-and-bugfix "$1" "$consoleTaskId"
         ;;
     hotfix)
-        git flow "$1" start "$(gim-get-next-version patch)"
+        git flow "$1" start "$(git-standard-get-next-version patch)"
         ;;
     release)
-        git flow release start "$(gim-get-next-version ${nextRevision})"
+        git flow release start "$(git-standard-get-next-version ${nextRevision})"
         ;;
     finish | publish)
-        git flow "$(gim-get-actual-branch-type)" "$1" "$(gim-get-actual-branch-name)"
+        git flow "$(git-standard-get-actual-branch-type)" "$1" "$(git-standard-get-actual-branch-name)"
         ;;
     commit)
-        gim-commit "$(gim-get-actual-branch-type)" "$(gim-get-actual-branch-name)"
+        git-standard-save "$(git-standard-get-actual-branch-type)" "$(git-standard-get-actual-branch-name)"
         ;;
     *)
         git flow "$@"
