@@ -1,9 +1,9 @@
 #!/bin/bash
 branchName=$(git get-branch-name)
+if [[ "$1" == "-remote" ]]; then
+    git push --delete origin "$branchName"
+fi
 if [[ "$branchName" != "master" ]]; then
     git master
     git branch -D "$branchName"
-fi
-if [[ "$1" == "-remote" ]]; then
-    git push --delete origin "$branchName"
 fi
