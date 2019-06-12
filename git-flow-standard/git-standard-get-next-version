@@ -1,8 +1,8 @@
 #!/bin/bash
-major=$(git describe --tags "git rev-list --tags --max-count=1" | cut -d '.' -f1)
+major=$(git describe --tags `git rev-list --tags --max-count=1` | cut -d '.' -f1)
 major="${major//v/}"
-minor=$(git describe --tags "git rev-list --tags --max-count=1" | cut -d '.' -f2)
-patch=$(git describe --tags "git rev-list --tags --max-count=1" | cut -d '.' -f3)
+minor=$(git describe --tags `git rev-list --tags --max-count=1` | cut -d '.' -f2)
+patch=$(git describe --tags `git rev-list --tags --max-count=1` | cut -d '.' -f3)
 
 if [[ -z "$major" ]]; then
     major=1
