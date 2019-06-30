@@ -35,6 +35,7 @@ The install script install this commands, git and git flow if not installed
 * publish: push to remote the current branch, create a remote branch if necessary
 * rename: rename current branch
 * save: commit all change
+* save remote: commit all change and push
 * set-origin: set origin remote
 
 ## git-flow standard:
