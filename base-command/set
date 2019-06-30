@@ -1,0 +1,5 @@
+#!/bin/bash
+if [[ "$1" == "origin" ]]
+then
+    git-set-origin
+fi

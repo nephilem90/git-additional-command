@@ -25,18 +25,23 @@ The install script install this commands, git and git flow if not installed
 
 * back: go to previous branch
 * clear: discard uncommit change
-* delete: delete branch and checkout master
-* delete-local: for each local branch you can decide if delete or not the branch
-* delete-remote: for each remote branch you can decide if delete or not the branch
 * develop: switch to develop branch
-* get-branch-name: get current branch name
 * master: switch to master branch
-* new-branch: create new branch
+
+* delete
+    * delete: delete branch and checkout master
+    * delete remote: delete branch, delete remote branch and checkout master
+    * delete all local: for each local branch you can decide if delete or not the branch
+    * delete all remote: for each remote branch you can decide if delete or not the branch
+* save
+    * save: commit all change
+    * save remote: commit all change and push
+
+* get-branch-name: get current branch name
+* new branch: create new branch from current branch
 * publish: push to remote the current branch, create a remote branch if necessary
 * rename: rename current branch
-* save: commit all change
-* save remote: commit all change and push
-* set-origin: set origin remote
+* set origin: set origin remote
 
 ## git-flow standard:
 
