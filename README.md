@@ -45,10 +45,10 @@ The install script install this commands, git and git flow if not installed
 
 ## git-flow standard:
 
-* feature: create feature branch (start to develop)
-* hotfix: create hotfix branch (start to master)
-* bugfix: create bugfix branch (start to feature)
-* release: create a release branch (start to develop)
+* feature: create feature branch (start from develop)
+* hotfix: create hotfix branch (start from master)
+* bugfix: create bugfix branch (start from feature)
+* release: create a release branch (start from develop)
 * commit: commit all change with standard commit message
 * finish: feature/bugfix merge to develop, hotfix merge to master and develop. delete local and remote current branch after merge
 * publish: push current branch to remote (crete a remote branch if not exist)
