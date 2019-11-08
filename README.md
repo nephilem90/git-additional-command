@@ -42,6 +42,7 @@ The install script install this commands, git and git flow if not installed
 * publish: push to remote the current branch, create a remote branch if necessary
 * rename: rename current branch
 * set origin: set origin remote
+* undo [ --soft | --mixed | --hard ]: reset on previus last commit
 
 ## git-flow standard:
 
