@@ -23,26 +23,15 @@ if [[ "$1" == "init" ]]; then
     git flow init -d
 fi
 
-for var in "$@"
-do
-    if [[ "$prev" == "-t" ]]; then
-        consoleTaskId="$var"
-    fi
-    if [[ "$var" == "-m" ]]; then
-        nextRevision="major"
-    fi
-    prev="$var"
-done
-
 case "$1" in
     feature | bugfix)
-        git-standard-feature-and-bugfix "$1" "$consoleTaskId"
+        git-standard-feature-and-bugfix "$@"
         ;;
     hotfix)
         git flow "$1" start "$(git-standard-get-next-version patch)"
         ;;
     release)
-        git flow release start "$(git-standard-get-next-version ${nextRevision})"
+        git flow release start "$(git-standard-get-next-version)"
         ;;
     finish | publish)
         git flow "$(git-standard-get-actual-branch-type)" "$1" "$(git-standard-get-actual-branch-name)"
