@@ -1,0 +1,3 @@
+#!/bin/bash
+DEVELOP_NAME="$(git config gitflow.branch.develop)"
+git checkout "$DEVELOP_NAME"

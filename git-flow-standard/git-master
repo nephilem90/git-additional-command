@@ -1,0 +1,3 @@
+#!/bin/bash
+MASTER_NAME="$(git config gitflow.branch.master)"
+git checkout "$MASTER_NAME"
