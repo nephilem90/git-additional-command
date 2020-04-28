@@ -1,4 +1,4 @@
 #!/bin/bash
 git reset --hard HEAD
-git clean -fx
+git clean -f
 git clean -fd
