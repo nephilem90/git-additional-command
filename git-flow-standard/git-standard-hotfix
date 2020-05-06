@@ -1,0 +1,11 @@
+#!/bin/bash
+
+fixName="$(git-standard-get-next-version patch)"
+if [[ "$2" != "" ]]; then
+    fixName="$2"
+fi
+if [[ "$fixName" == "" ]]; then
+    printf "hotfix name: "
+    read -r fixName
+fi
+git flow hotfix start "$fixName"

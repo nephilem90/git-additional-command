@@ -28,7 +28,7 @@ case "$1" in
         git-standard-feature-and-bugfix "$@"
         ;;
     hotfix)
-        git flow "$1" start "$(git-standard-get-next-version patch)"
+        git-standard-hotfix "$@"
         ;;
     release)
         git flow release start "$(git-standard-get-next-version)"
