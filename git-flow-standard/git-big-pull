@@ -1,0 +1,7 @@
+#!/bin/bash
+git develop
+git pull
+git checkout -
+git master
+git pull
+git checkout -
